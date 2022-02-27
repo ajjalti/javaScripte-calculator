@@ -15,5 +15,4 @@ function mod(n,m){
     return n%m;
 }
 //partie event :
-var modulo = document.getElementsByClassName('output');
-modulo.innerText = "ici";
+
