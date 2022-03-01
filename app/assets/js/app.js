@@ -83,7 +83,7 @@ function calcul(s){
         for (let n in data){
             res*=toNumber(data[n]);
         }res=toNumber("-"+res);
-        document.getElementById('output').value = `${res}`;
+        document.getElementById('output').value = `   ${res}`;
         return;
       }
       ////////////////////////////////////////////////////////////////////
@@ -101,12 +101,12 @@ function calcul(s){
           }
         }
         res=toNumber("-"+res);
-        document.getElementById('output').value = `${res}`;
+        document.getElementById('output').value = `   ${res}`;
         return;
       }
       x=res;
     }
-  document.getElementById('output').value = `${x}`;
+  document.getElementById('output').value = `   ${x}`;
   }
 }
 //////////////////////////////////////
@@ -115,14 +115,14 @@ function calcul(s){
 function aff(n){
   if(n=='c'){
     x="";
-    document.getElementById('output').value = `${x}`;
+    document.getElementById('output').value = `   ${x}`;
     return;
   }
   if(x=="00"){
     x="";
   }
   x+=`${n}`;
-  document.getElementById('output').value = `${x}`;
+  document.getElementById('output').value = `   ${x}`;
 }
 /////////////////////////////////////////////////
 // fonction qui change le sign du premier nombre:
@@ -130,10 +130,10 @@ function aff(n){
 function sign(){
   if (x[0]=="-"){
     x=x.replace("-","");
-    document.getElementById('output').value = `${x}`;
+    document.getElementById('output').value = `   ${x}`;
   }else if(x[0]!='-'){
     x='-'+x;
-    document.getElementById('output').value = `${x}`;
+    document.getElementById('output').value = `   ${x}`;
   }
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
