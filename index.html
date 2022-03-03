@@ -14,11 +14,24 @@
             margin: 0!important;
         }
         .main{
-            height: 90vh;
+            height: 60vh;
         }
         .btn{
             height: 100%;
             font-size: 20pt;
+            background-color: aliceblue;
+        }
+        .video{
+            height: 100vh;
+             width: 100vw;
+             object-fit: fill;
+             position: fixed;
+             left: 0;
+             right: 0;
+              top: 0;
+             bottom: 0;
+             z-index: -1;
+
         }
     </style>
     <script>
@@ -27,10 +40,13 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div class="container-fluid  text-center main">
-        <div class="h1">Calculator</div>
+    <video  autoplay loop muted class="video">
+        <source src="app/media/video.mp4" type="video/mp4">
+    </video>
+    <div class="container mt-5" style="height: 20px;"></div>
+    <div class="container-fluid  text-center main mt-5">
         <div class="container-md w-75 h-50 mx-auto">
-            <div class="container h-100 border border-1">
+            <div class="container h-100 ">
                 <div class="row h-25">
                     <div class="col">
                     <input type="text" class="form-control h-100  bg-black text-white" value="    00" readonly id="output">
@@ -38,74 +54,74 @@
                 </div>
                 <div class="row h-25">
                     <div class="col">
-                        <div class="btn btn-outline-warning w-100 C  pt-4" onclick="aff('c')">C</div>
+                        <div class="btn btn-outline-warning w-100 C  pt-1" onclick="aff('c')">C</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-warning w-100 sign pt-4" onclick="sign()">+/_</div>
+                        <div class="btn btn-outline-warning w-100 sign pt-1" onclick="sign()">+/_</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-warning w-100 modulo  pt-4"onclick="aff('%')">%</div>
+                        <div class="btn btn-outline-warning w-100 modulo  pt-1"onclick="aff('%')">%</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-warning w-100 diviion  pt-4"onclick="aff('/');">/</div>
-                    </div>
-                </div>
-                <div class="row h-25">
-                    <div class="col">
-                        <div class="btn btn-outline-info w-100 sept pt-4"onclick="aff(7);">7</div>
-                    </div>
-                    <div class="col">
-                        <div class="btn btn-outline-info w-100 eight pt-4 "onclick="aff(8);">8</div>
-                    </div>
-                    <div class="col">
-                        <div class="btn btn-outline-info w-100 nine pt-4 "onclick="aff(9)" >9</div>
-                    </div>
-                    <div class="col">
-                        <div class="btn btn-outline-warning w-100 multiple  pt-4" onclick="aff('*')">*</div>
+                        <div class="btn btn-outline-warning w-100 diviion  pt-1"onclick="aff('/');">/</div>
                     </div>
                 </div>
                 <div class="row h-25">
                     <div class="col">
-                        <div class="btn btn-outline-info w-100 four pt-4" onclick="aff(4)">4</div>
+                        <div class="btn btn-outline-info w-100 sept pt-1"onclick="aff(7);">7</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-info w-100 five pt-4" onclick="aff(5)">5</div>
+                        <div class="btn btn-outline-info w-100 eight pt-1 "onclick="aff(8);">8</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-info w-100 six pt-4" onclick="aff(6)">6</div>
+                        <div class="btn btn-outline-info w-100 nine pt-1 "onclick="aff(9)" >9</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-warning w-100 moin  pt-4" onclick="aff('-')">-</div>
+                        <div class="btn btn-outline-warning w-100 multiple  pt-1" onclick="aff('*')">*</div>
                     </div>
                 </div>
                 <div class="row h-25">
                     <div class="col">
-                        <div class="btn btn-outline-info w-100 un pt-4" onclick="aff(1)">1</div>
+                        <div class="btn btn-outline-info w-100 four pt-1" onclick="aff(4)">4</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-info w-100 deux pt-4"onclick="aff(2)">2</div>
+                        <div class="btn btn-outline-info w-100 five pt-1" onclick="aff(5)">5</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-info w-100 trois pt-4"onclick="aff(3)">3</div>
+                        <div class="btn btn-outline-info w-100 six pt-1" onclick="aff(6)">6</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-warning w-100 plus  pt-4"onclick="aff('+')">+</div>
+                        <div class="btn btn-outline-warning w-100 moin  pt-1" onclick="aff('-')">-</div>
+                    </div>
+                </div>
+                <div class="row h-25">
+                    <div class="col">
+                        <div class="btn btn-outline-info w-100 un pt-1" onclick="aff(1)">1</div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-outline-info w-100 deux pt-1"onclick="aff(2)">2</div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-outline-info w-100 trois pt-1"onclick="aff(3)">3</div>
+                    </div>
+                    <div class="col">
+                        <div class="btn btn-outline-warning w-100 plus  pt-1"onclick="aff('+')">+</div>
                     </div>
                 </div>
                 <div class="row h-25">
                     <div class="col-6">
-                        <div class="btn btn-outline-info w-100 zero  pt-4"onclick="aff(0)">0</div>
+                        <div class="btn btn-outline-info w-100 zero  pt-1"onclick="aff(0)">0</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-info w-100 virgule pt-4"onclick="aff('.')">,</div>
+                        <div class="btn btn-outline-info w-100 virgule pt-1"onclick="aff('.')">,</div>
                     </div>
                     <div class="col">
-                        <div class="btn btn-outline-success w-100 equal  pt-4" onclick="calcul(x)">=</div>
+                        <div class="btn btn-outline-success w-100 equal  pt-1" onclick="calcul(x)">=</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid text-center"> &copy; Created By <a href="https://www.linkedin.com/in/ahmed-ajjalti/">Ahmed Ajjalti</a></div>
+    <div class="container-fluid text-center text-white"> &copy; Created By <a href="https://www.linkedin.com/in/ahmed-ajjalti/">Ahmed Ajjalti</a></div>
 </body>
 </html>
